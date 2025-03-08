@@ -1,0 +1,33 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixins" as *;
+@use "sass:color";
+
+.contact {
+  text-align: center;
+  background-color: $color-white;
+
+  &__text {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  &__tel {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background-color: $color-primary;
+    color: $color-white;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: color.adjust($color-primary, $lightness: 10%);
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixins" as *;
+
+.topics {
+  background-color: $color-white;
+
+  &__list {
+    @include container;
+    max-width: 800px;
+  }
+
+  &__item {
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba($color-primary, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgba($color-primary, 0.05);
+    }
+
+    time {
+      font-size: 0.875rem;
+      color: $color-secondary;
+      white-space: nowrap;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 1rem;
+    }
+  }
+
+  &__category {
+    padding: 0.25rem 0.75rem;
+    background-color: $color-primary;
+    color: $color-white;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+}
